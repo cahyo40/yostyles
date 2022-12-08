@@ -22,6 +22,7 @@ class YoButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: buttonColor,
+      borderRadius: YoRadius.arLG,
       child: InkWell(
         hoverColor: buttonColor.withOpacity(.75),
         onTap: onTap,
