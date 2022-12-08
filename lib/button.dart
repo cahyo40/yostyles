@@ -25,6 +25,7 @@ class YoButton extends StatelessWidget {
       borderRadius: YoRadius.arLG,
       child: InkWell(
         hoverColor: buttonColor.withOpacity(.75),
+        borderRadius: YoRadius.arLG,
         onTap: onTap,
         child: Container(
           decoration: yoButtonStyle == YoButtonStyle.solid
