@@ -21,11 +21,8 @@ class YoButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      // color: buttonColor,
-      shadowColor: buttonColor.withOpacity(.25),
       borderRadius: YoRadius.arLG,
       child: InkWell(
-        hoverColor: buttonColor.withOpacity(.5),
         borderRadius: YoRadius.arLG,
         onTap: onTap,
         child: Container(
