@@ -8,16 +8,16 @@ class YoFSize {
   YoFSize._();
 
   /// XS value 12
-  static const double textXS = 12;
+  static const double textXS = 10;
 
   /// SM value 14
-  static const double textSM = 14;
+  static const double textSM = 12;
 
   /// BASE value 16
-  static const double textBASE = 16;
+  static const double textBASE = 14;
 
   /// LG value 18
-  static const double textLG = 18;
+  static const double textLG = 16;
 
   /// XL value 20
   static const double textXL = 20;
