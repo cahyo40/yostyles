@@ -7,16 +7,16 @@ import 'package:flutter/material.dart';
 class YoFSize {
   YoFSize._();
 
-  /// XS value 12
+  /// XS value 10
   static const double textXS = 10;
 
-  /// SM value 14
+  /// SM value 12
   static const double textSM = 12;
 
-  /// BASE value 16
+  /// BASE value 14
   static const double textBASE = 14;
 
-  /// LG value 18
+  /// LG value 16
   static const double textLG = 16;
 
   /// XL value 20
