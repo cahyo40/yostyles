@@ -43,7 +43,7 @@ class YoButton extends StatelessWidget {
 class YoButtonIcon extends StatelessWidget {
   final YoButtonSize yoButtonSize;
   final YoButtonStyle yoButtonStyle;
-  final IconData icon;
+  final Icon icon;
   final Color buttonColor;
   final VoidCallback onTap;
   final Widget child;
@@ -75,7 +75,7 @@ class YoButtonIcon extends StatelessWidget {
             yoButtonStyle == YoButtonStyle.outline ? Colors.white : buttonColor,
       ),
       onPressed: onTap,
-      icon: Icon(icon),
+      icon: icon,
       label: child,
     );
   }
