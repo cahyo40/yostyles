@@ -11,28 +11,72 @@ class YoButton extends StatelessWidget {
   final Widget child;
   const YoButton({
     super.key,
-    this.yoButtonSize = YoButtonSize.medium,
-    this.yoButtonStyle = YoButtonStyle.solid,
-    this.buttonColor = YoColor.blue,
+    required this.yoButtonSize,
+    required this.yoButtonStyle,
+    required this.buttonColor,
     required this.onTap,
     required this.child,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      borderRadius: YoRadius.arLG,
-      child: InkWell(
-        borderRadius: YoRadius.arLG,
-        onTap: onTap,
-        child: Container(
-          decoration: yoButtonStyle == YoButtonStyle.solid
-              ? solidButton(buttonColor, yoButtonSize)
-              : outlineButton(buttonColor, yoButtonSize),
-          padding: buttonSize(yoButtonSize),
-          child: child,
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        padding: buttonSize(yoButtonSize),
+        shape: RoundedRectangleBorder(
+          borderRadius: YoRadius.arLG,
         ),
+        side: BorderSide(
+          color: buttonColor,
+          width: 1.5,
+          style: BorderStyle.solid,
+        ),
+        backgroundColor:
+            yoButtonStyle == YoButtonStyle.outline ? Colors.white : buttonColor,
       ),
+      onPressed: onTap,
+      child: child,
+    );
+  }
+}
+
+class YoButtonIcon extends StatelessWidget {
+  final YoButtonSize yoButtonSize;
+  final YoButtonStyle yoButtonStyle;
+  final IconData icon;
+  final Color buttonColor;
+  final VoidCallback onTap;
+  final Widget child;
+
+  const YoButtonIcon({
+    super.key,
+    this.yoButtonSize = YoButtonSize.medium,
+    this.yoButtonStyle = YoButtonStyle.solid,
+    this.buttonColor = YoColor.blue,
+    required this.onTap,
+    required this.child,
+    required this.icon,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton.icon(
+      style: ElevatedButton.styleFrom(
+        padding: buttonSize(yoButtonSize),
+        shape: RoundedRectangleBorder(
+          borderRadius: YoRadius.arLG,
+        ),
+        side: BorderSide(
+          color: buttonColor,
+          width: 1.5,
+          style: BorderStyle.solid,
+        ),
+        backgroundColor:
+            yoButtonStyle == YoButtonStyle.outline ? Colors.white : buttonColor,
+      ),
+      onPressed: onTap,
+      icon: Icon(icon),
+      label: child,
     );
   }
 }
