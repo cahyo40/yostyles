@@ -11,9 +11,9 @@ class YoButton extends StatelessWidget {
   final Widget child;
   const YoButton({
     super.key,
-    required this.yoButtonSize,
-    required this.yoButtonStyle,
-    required this.buttonColor,
+    this.yoButtonSize = YoButtonSize.medium,
+    this.yoButtonStyle = YoButtonStyle.solid,
+    this.buttonColor = YoColor.blue,
     required this.onTap,
     required this.child,
   });
